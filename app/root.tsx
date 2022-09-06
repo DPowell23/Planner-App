@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Header from "./components/Header";
 
 import styles from "./styles/app.css";
 
@@ -16,7 +17,7 @@ export function links() {
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "To Do",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -27,11 +28,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-dark">
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
+        {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
     </html>
   );
