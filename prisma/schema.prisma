@@ -16,4 +16,5 @@ model Todo {
   updatedAt   DateTime @updatedAt
   title       String
   description String
+  dueDate     String
 }

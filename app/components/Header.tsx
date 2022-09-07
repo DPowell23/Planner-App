@@ -6,11 +6,11 @@ export default function Header() {
       <div className="flex justify-center items-center py-8">
         <Link
           to={"/"}
-          className="whitespace-nowrap text-xl font-semibold text-white uppercase tracking-widest px-4 hover:bg-blue hover:text-light"
+          className="whitespace-nowrap text-xl font-semibold text-light uppercase tracking-widest px-4 hover:bg-blue hover:text-light"
         >
           Home
         </Link>
       </div>
     </div>
-  );
+  )
 }
