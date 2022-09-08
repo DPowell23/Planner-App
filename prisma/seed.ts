@@ -17,15 +17,19 @@ function getTodo() {
       id: 0,
       title: "Build DB",
       description: "Making a remix todo app DB",
-      dueDate: "Sept 10th",
     },
     {
       id: 1,
       title: "Build app",
       description: "Making a remix todo app",
-      dueDate: "Sept 10th",
+    },
+    {
+      id: 2,
+      title: "Test app",
+      description: "Making a remix todo app",
     },
   ]
 }
 
-//node --require esbuild-register prisma/seed.ts
+// npx prisma db push
+// node --require esbuild-register prisma/seed.ts

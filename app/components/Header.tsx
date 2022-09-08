@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "@remix-run/react"
 
 export default function Header() {
   return (
@@ -6,9 +6,15 @@ export default function Header() {
       <div className="flex justify-center items-center py-8">
         <Link
           to={"/"}
-          className="whitespace-nowrap text-xl font-semibold text-light uppercase tracking-widest px-4 hover:bg-blue hover:text-light"
+          className="whitespace-nowrap text-xl font-semibold text-light uppercase tracking-widest px-4 hover:bg-blue hover:text-dark"
         >
-          Home
+          TODO
+        </Link>
+        <Link
+          to={"/completed"}
+          className="whitespace-nowrap text-xl font-semibold text-light uppercase tracking-widest px-4 hover:bg-blue hover:text-dark"
+        >
+          Completed
         </Link>
       </div>
     </div>

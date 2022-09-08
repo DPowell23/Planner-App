@@ -1,10 +1,8 @@
-import { useState } from "react"
 import type { LoaderFunction } from "@remix-run/node"
 import type { Todo } from "@prisma/client"
 import { json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react"
 import { db } from "~/utils/db.server"
-import NewTodo from "~/components/NewTodo"
 import { Tooltip, IconButton } from "@mui/material"
 import EditIcon from "@mui/icons-material/Edit"
 import DeleteIcon from "@mui/icons-material/Delete"
@@ -29,7 +27,7 @@ export default function Index() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {data.todoList.map((todo) => (
           <div className="relative">
-            {todo.completed ? null : (
+            {!todo.completed ? null : (
               <div>
                 <div
                   key={todo.id}
@@ -67,24 +65,7 @@ export default function Index() {
             )}
           </div>
         ))}
-        <div className="h-52 w-52 flex justify-center items-center">
-          <div className="bg-light flex rounded-lg shadow-lg h-32 w-32">
-            <div className="mx-auto my-auto">
-              <Tooltip title="Add">
-                <IconButton
-                  disableRipple
-                  onClick={() => {
-                    console.log("test")
-                  }}
-                >
-                  <img src="plus.svg" className="h-12" />
-                </IconButton>
-              </Tooltip>
-            </div>
-          </div>
-        </div>
       </div>
-      {/* <NewTodo /> */}
     </div>
   )
 }
