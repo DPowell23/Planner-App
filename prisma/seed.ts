@@ -33,3 +33,4 @@ function getTodo() {
 
 // npx prisma db push
 // node --require esbuild-register prisma/seed.ts
+// npx prisma studio
